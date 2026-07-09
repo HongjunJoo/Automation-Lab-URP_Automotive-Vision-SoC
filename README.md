@@ -125,3 +125,17 @@ source scripts/open_project.tcl
 2. RTL 시뮬레이션으로 결과 HEX(`320x240`) 생성
 3. 결과 HEX를 이미지로 복원(hex_to_img.py 실행)
 4. 복원 결과를 시각적으로 확인
+
+
+## 👤 My Contributions (주홍준 / Hongjun Joo)
+
+본 저장소는 Automation Lab 학부연구생(URP) **팀 프로젝트**이며,
+제가 담당한 부분은 다음과 같습니다:
+
+- **LUT 기반 fisheye 왜곡보정 RTL 설계**
+  `axis_resize_half → bram_con → bram → fisheye_reader_stream` 스트리밍 체인 구현
+  (사전 계산된 픽셀 매핑 테이블 `map_x.mem` / `map_y.mem`을 LUT로 사용한 remapping)
+- **RTL 기능 검증(Testbench)**
+  이미지 → HEX → RTL 시뮬레이션 → HEX → 이미지 복원 흐름으로 픽셀 단위 정합성 검증
+
+> 📄 관련 논문: **ASK 2026 (한국정보처리학회) 1저자** — LUT-Based Fisheye Undistortion Preprocessing with DPU-Integrated Real-Time Lane Detection for Automotive Vision SoC
